@@ -246,7 +246,7 @@ final class MySlitherCanvas extends JPanel {
                         snake == model.snake ? OWN_SNAKE_HALO_COLORS : SNAKE_HALO_COLORS));
                     g.fillRect((int) Math.round(snake.x - thickness * 3 / 2 - 1), (int) Math.round(snake.y - thickness * 3 / 2 - 1), (int) (thickness * 3 + 2), (int) (thickness * 3 + 2));
                 }
-                g.setColor(snake == model.snake ? OWN_SNAKE_COLOR : SNAKE_COLOR);
+                g.setColor(snake == model.snake ? OWN_SNAKE_COLOR : SNAKE_COLOR); //something to do with snake color?
                 g.fill(new Ellipse2D.Double(snake.x - thickness * 2 / 3, snake.y - thickness * 2 / 3, thickness * 4 / 3, thickness * 4 / 3));
 
                 String lengthText = "" + model.getSnakeLength(snake.body.size(), snake.getFam());
