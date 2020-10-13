@@ -141,6 +141,8 @@ final class MySlitherJFrame extends JFrame {
         snake = new JComboBox<>(SNAKES);
         snake.setMaximumRowCount(snake.getItemCount());
 
+        //here set skin function?
+
         useRandomServer = new JCheckBox("use random server", true);
         useRandomServer.addActionListener(a -> {
             setStatus(null);
