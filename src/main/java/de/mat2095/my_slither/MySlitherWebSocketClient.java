@@ -668,7 +668,7 @@ final class MySlitherWebSocketClient extends WebSocketClient {
             int id = (data[3] << 8) | data[4];
             double x = ((data[6] << 16) | (data[7] << 8) | data[8]) / 5.0;
             double y = ((data[9] << 16) | (data[10] << 8) | data[11]) / 5.0;
-            double radius = data[12] / 5.0;
+            double radius = (data[12] *10)/ 5.0; //change prey size here, multiplied by 10 to make more noticeable
             int dir = data[13] - 48;
             double wang = ((data[14] << 16) | (data[15] << 8) | data[16]) * PI2 / ANGLE_CONSTANT;
             double ang = ((data[17] << 16) | (data[18] << 8) | data[19]) * PI2 / ANGLE_CONSTANT;
