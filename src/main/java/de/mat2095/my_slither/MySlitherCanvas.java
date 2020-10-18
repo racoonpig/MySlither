@@ -30,7 +30,7 @@ final class MySlitherCanvas extends JPanel {
     private static final Color SNAKE_COLOR = new Color(0x287BDE);
 
     //Own snake colour is the head
-    private static final Color OWN_SNAKE_COLOR = new Color(0x287BDE);
+    private static final Color OWN_SNAKE_COLOR = new Color(0x287BDE); //original snake colour is defined green
     private static final float[] SNAKE_HALO_FRACTIONS = new float[]{0.5f, 1f};
     private static final Color[] SNAKE_HALO_COLORS = new Color[]{new Color(0x60287BDE, true), new Color(0x00287BDE, true)};
     private static final Color[] OWN_SNAKE_HALO_COLORS = new Color[]{new Color(0x6039AFFF, true), new Color(0x0039AFFF, true)};
