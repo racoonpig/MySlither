@@ -435,8 +435,56 @@ final class MySlitherJFrame extends JFrame {
     int getSkin(){
         String selectedSkin = (String) snake.getSelectedItem();
         String selectedSkinNumb = selectedSkin.substring(0, 2);
-        System.out.println("Selected colour numb is: " + selectedSkinNumb);
+        // System.out.println("Selected colour numb is: " + selectedSkinNumb);
+
+        //default color is blue (only 7 cases working of current)
+
         int desiredSkin =  0x287BDE;
+
+        switch(selectedSkinNumb)
+        {
+            case "00":
+            //purple
+            desiredSkin = 0x800080;
+            break;
+
+            case "01":
+            //blue
+            desiredSkin = 0x0000FF;
+            break;
+
+            case "02":
+            //cyan
+            desiredSkin = 0x00FFFF;
+            break;
+
+            case "03":
+            //green
+            desiredSkin = 0x008000;
+            break;
+
+            case "04":
+            //yellow
+            desiredSkin = 0xFFFF00;
+            break;
+
+            case "05":
+            //orange
+            desiredSkin = 0xFFA500;
+            break;
+
+            case "06":
+            //salmon
+            desiredSkin = 0xFF7F50;
+            break;
+
+            case "07":
+            //red
+            desiredSkin = 0xFF0000;
+            break;
+
+        }
+        System.out.println("desiredSkin is: " + desiredSkin);
         return desiredSkin;
     }
 
