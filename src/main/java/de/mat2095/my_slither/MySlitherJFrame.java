@@ -484,7 +484,7 @@ final class MySlitherJFrame extends JFrame {
             break;
 
         }
-        System.out.println("desiredSkin is: " + desiredSkin);
+        // System.out.println("desiredSkin is: " + desiredSkin);
         return desiredSkin;
     }
 
