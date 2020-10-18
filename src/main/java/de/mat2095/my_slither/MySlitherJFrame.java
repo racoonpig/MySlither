@@ -142,8 +142,6 @@ final class MySlitherJFrame extends JFrame {
         snake = new JComboBox<>(SNAKES);
         snake.setMaximumRowCount(snake.getItemCount());
 
-        //here set skin function?
-
         useRandomServer = new JCheckBox("use random server", true);
         useRandomServer.addActionListener(a -> {
             setStatus(null);
@@ -298,6 +296,7 @@ final class MySlitherJFrame extends JFrame {
             case CONNECTING:
                 setStatus(Status.CONNECTED);
                 client.sendInitRequest(snake.getSelectedIndex(), name.getText());
+                //set snake skin colour to desired colour
                 break;
             case DISCONNECTING:
                 disconnect();
@@ -431,6 +430,14 @@ final class MySlitherJFrame extends JFrame {
     void setHighscoreData(int row, String name, int length, boolean highlighted) {
         highscoreList.setValueAt(highlighted ? "<html><b>" + length + "</b></html>" : length, row, 0);
         highscoreList.setValueAt(highlighted ? "<html><b>" + name + "</b></html>" : name, row, 1);
+    }
+
+    int getSkin(){
+        String selectedSkin = (String) snake.getSelectedItem();
+        String selectedSkinNumb = selectedSkin.substring(0, 2);
+        System.out.println("Selected colour numb is: " + selectedSkinNumb);
+        int desiredSkin =  0x287BDE;
+        return desiredSkin;
     }
 
     private enum Status {

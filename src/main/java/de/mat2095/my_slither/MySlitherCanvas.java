@@ -37,7 +37,7 @@ final class MySlitherCanvas extends JPanel {
     private static final Color SNAKE_BODY_COLOR = new Color(0x6A8759);
 
     //Changes colour of own snakes body
-    private static final Color OWN_SNAKE_BODY_COLOR = new Color(0xff0000);
+    // private static final Color OWN_SNAKE_BODY_COLOR = new Color(0xff0000);
     private static final Color MAP_COLOR = new Color(0xA0A9B7C6, true);
     private static final Color MAP_POSITION_COLOR = new Color(0xE09E2927, true);
     private static final Color NAME_SHADOW_COLOR = new Color(0xC02B2B2B, true);
@@ -204,7 +204,10 @@ final class MySlitherCanvas extends JPanel {
             model.snakes.values().forEach(snake -> {
                 double thickness = 16 + snake.body.size() / 4.0;
                 if (snake.body.size() >= 2) {
-                    g.setColor(snake == model.snake ? OWN_SNAKE_BODY_COLOR : SNAKE_BODY_COLOR);
+                    // view.getSkin();
+                    //update OWN_SNAKE_BODY_COLOR to view.getSkin
+                    Color TRUE_OWN_SNAKE_BODY_COLOR = new Color(view.getSkin());
+                    g.setColor(snake == model.snake ? TRUE_OWN_SNAKE_BODY_COLOR : SNAKE_BODY_COLOR);
                     g.setStroke(new BasicStroke((float) thickness, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
 
                     double totalLength = 0; // TODO: respect FAM, ???
